@@ -8,12 +8,12 @@ import {
   LayoutDashboard,
   List,
   PieChart,
-  Banknote,
   Plus,
   Tags,
   Gauge,
 } from "lucide-react";
 import type { View } from "@/store/store";
+import runnelIcon from "@/assets/runnel-icon-64.png";
 
 const NAV_ITEMS: Record<View, { label: string; icon: React.ElementType }> = {
   dashboard: { label: "Dashboard", icon: LayoutDashboard },
@@ -49,9 +49,12 @@ export function Sidebar({
       <div className="flex flex-col h-full">
         <div className="p-5">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
-              <Banknote className="w-4 h-4 text-primary-foreground" />
-            </div>
+            <img
+              src={runnelIcon}
+              alt=""
+              aria-hidden="true"
+              className="h-7 w-7 rounded-lg"
+            />
             <span className="text-lg font-semibold font-heading tracking-tight">
               Runnel
             </span>
